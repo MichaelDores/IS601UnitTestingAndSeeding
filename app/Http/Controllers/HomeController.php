@@ -32,9 +32,11 @@ class HomeController extends Controller
 
 
 
-        $user = User::find(2);
-        $user->delete();
         $users = User::all();
+
+
+
+        dd($users->count());
 
 
         return view('Profile', ['users' => $users]);
